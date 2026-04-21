@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message Envoyé - Lucas Bleau</title>
+    <title>Message Envoyé — Lucas Bleau</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Outfit', sans-serif;
+            background: #09090b;
+            color: #fafafa;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -22,62 +22,65 @@
             padding: 2rem;
         }
 
-        .container {
-            background: white;
-            border-radius: 1.5rem;
-            padding: 3rem;
-            max-width: 500px;
+        .card {
+            background: #111113;
+            border: 1px solid #27272a;
+            border-radius: 16px;
+            padding: 3rem 2.5rem;
+            max-width: 440px;
+            width: 100%;
             text-align: center;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            animation: fadeInUp 0.6s ease;
+            animation: fadeUp 0.5s ease;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .success-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 2rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .check-wrap {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1.75rem;
+            background: rgba(34, 211, 238, 0.08);
+            border: 1px solid rgba(34, 211, 238, 0.2);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            animation: scaleIn 0.5s ease 0.2s both;
+            animation: scaleIn 0.4s ease 0.15s both;
         }
 
         @keyframes scaleIn {
-            from {
-                transform: scale(0);
-            }
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
 
-            to {
-                transform: scale(1);
-            }
+        .check-wrap svg {
+            stroke: #22d3ee;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: #22d3ee;
+            letter-spacing: 0.05em;
+            display: block;
+            margin-bottom: 0.5rem;
         }
 
         h1 {
-            color: #1e293b;
-            font-size: 2rem;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2.5rem;
+            letter-spacing: 0.05em;
+            color: #fafafa;
             margin-bottom: 1rem;
-            font-weight: 700;
         }
 
         p {
-            color: #64748b;
-            font-size: 1.1rem;
-            line-height: 1.6;
+            color: #71717a;
+            font-size: 0.9rem;
+            line-height: 1.75;
             margin-bottom: 2rem;
         }
 
@@ -85,58 +88,58 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.875rem 1.75rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 0.75rem;
+            padding: 0.7rem 1.5rem;
+            background: #22d3ee;
+            color: #09090b;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            font-size: 0.875rem;
+            transition: all 0.25s ease;
         }
 
         .btn:hover {
+            background: #67e8f9;
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+            box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
         }
 
         .countdown {
             margin-top: 1.5rem;
-            color: #94a3b8;
-            font-size: 0.9rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            color: #3f3f46;
+            letter-spacing: 0.03em;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="success-icon">✅</div>
-        <h1>Message Envoyé !</h1>
-        <p>
-            Merci pour votre message ! Je l'ai bien reçu et je vous répondrai dans les plus brefs délais.
-        </p>
-        <a href="index.html" class="btn">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M15 10L5 10M5 10L9 6M5 10L9 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
+    <div class="card">
+        <div class="check-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5" />
             </svg>
-            <span>Retour au Portfolio</span>
+        </div>
+        <span class="mono">// message.sent = true</span>
+        <h1>Message Envoyé</h1>
+        <p>Merci pour votre message. Je l'ai bien reçu et vous répondrai dans les meilleurs délais.</p>
+        <a href="index.html" class="btn">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 10L5 10M5 10L9 6M5 10L9 14" />
+            </svg>
+            Retour au portfolio
         </a>
-        <p class="countdown">Redirection automatique dans <span id="countdown">5</span> secondes...</p>
+        <p class="countdown">Redirection dans <span id="countdown">5</span>s</p>
     </div>
 
     <script>
-        let seconds = 5;
-        const countdownElement = document.getElementById('countdown');
-
-        const interval = setInterval(() => {
-            seconds--;
-            countdownElement.textContent = seconds;
-
-            if (seconds === 0) {
-                clearInterval(interval);
-                window.location.href = 'index.html';
-            }
+        let s = 5;
+        const el = document.getElementById('countdown');
+        const t = setInterval(() => {
+            s--;
+            el.textContent = s;
+            if (s === 0) { clearInterval(t); window.location.href = 'index.html'; }
         }, 1000);
     </script>
 </body>

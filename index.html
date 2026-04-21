@@ -4,245 +4,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfolio de Lucas Bleau - Développeur & Étudiant en Master Management et Architecture Logicielle">
+    <meta name="description" content="Portfolio de Lucas Bleau — Développeur & Étudiant Master MAALSI à CESI">
     <meta name="keywords" content="Lucas Bleau, Développeur, Portfolio, CESI, Master MAALSI">
     <meta name="author" content="Lucas Bleau">
-    <title>Lucas Bleau | Développeur & Étudiant CESI</title>
+    <title>Lucas Bleau — Développeur</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div class="noise-overlay"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <span class="logo-text">LB</span>
-            </div>
-            <ul class="nav-menu">
+            <a href="#accueil" class="nav-logo">LB</a>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#accueil" class="nav-link active">Accueil</a></li>
                 <li><a href="#apropos" class="nav-link">À Propos</a></li>
                 <li><a href="#parcours" class="nav-link">Parcours</a></li>
                 <li><a href="#competences" class="nav-link">Compétences</a></li>
-                <li><a href="#projets" class="nav-link">Projets</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <button class="hamburger" id="hamburger" aria-label="Menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="accueil" class="hero">
-        <div class="hero-background">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-            <div class="gradient-orb orb-3"></div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    Bonjour, je suis <span class="gradient-text">Lucas Bleau</span>
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-container">
+            <div class="hero-left">
+                <div class="hero-eyebrow">
+                    <span class="mono-tag">// Développeur &amp; Étudiant CESI</span>
+                </div>
+                <h1 class="hero-name">
+                    <span class="name-line">Lucas</span>
+                    <span class="name-line accent">Bleau</span>
                 </h1>
-                <p class="hero-subtitle">Étudiant en Master Management et Architecture Logicielle</p>
-                <p class="hero-description">
+                <p class="hero-desc">
                     Passionné par le développement logiciel et l'architecture d'applications.
                     Actuellement en Master MAALSI à CESI, je combine compétences techniques
                     et vision d'ensemble pour créer des solutions innovantes.
                 </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-secondary">
-                        <span>Me contacter</span>
-                    </a>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Me contacter</a>
+                    <a href="#parcours" class="btn btn-ghost">Voir mon parcours</a>
                 </div>
                 <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">22</span>
-                        <span class="stat-label">ans</span>
+                    <div class="stat">
+                        <span class="stat-num">22</span>
+                        <span class="stat-lbl">ans</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">Bac+5</span>
-                        <span class="stat-label">En cours</span>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num">Bac+5</span>
+                        <span class="stat-lbl">en cours</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Expériences</span>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num">5+</span>
+                        <span class="stat-lbl">expériences</span>
                     </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="image-frame">
-                    <div class="image-border"></div>
-                    <img src="moi.jpg" alt="Lucas Bleau" class="profile-image">
+            <div class="hero-right">
+                <div class="photo-wrapper">
+                    <img src="photo2.jpeg" alt="Lucas Bleau" class="profile-photo">
+                    <div class="photo-badge">
+                        <span class="badge-dot"></span>
+                        <span>Disponible</span>
+                    </div>
+                </div>
+                <div class="hero-socials">
+                    <a href="mailto:bleaulucas7@gmail.com" class="social-link" aria-label="Email" title="Email">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lucas-bleau" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/bleaulucas" target="_blank" rel="noopener" class="social-link" aria-label="GitHub" title="GitHub">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <span>Défiler</span>
-            <div class="scroll-arrow"></div>
+        <div class="scroll-hint">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6 6-6"/>
+            </svg>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="apropos" class="about">
+    <!-- À Propos -->
+    <section id="apropos" class="section about-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Qui suis-je ?</span>
-                <h2 class="section-title">À Propos de Moi</h2>
+            <div class="section-head">
+                <span class="mono-tag">// 01</span>
+                <h2 class="section-title">À Propos</h2>
+                <p class="section-sub">Qui suis-je ?</p>
             </div>
-            <div class="about-content">
-                <div class="about-text">
+            <div class="about-layout">
+                <div class="about-intro-col">
                     <p class="about-intro">
-                        Je suis actuellement étudiant en <strong>Master Management et Architecture Logicielle</strong> à
-                        CESI,
+                        Je suis étudiant en <strong>Master Management et Architecture Logicielle</strong> à CESI,
                         après avoir obtenu une Licence CDA et un BTS SIO. Mon parcours reflète ma passion pour
                         le développement et l'architecture logicielle.
                     </p>
-                    <div class="qualities-grid">
-                        <div class="quality-card">
-                            <div class="quality-icon">🤝</div>
-                            <h3>Esprit d'équipe</h3>
-                            <p>Collaboration efficace et communication fluide en équipe pluridisciplinaire</p>
-                        </div>
-                        <div class="quality-card">
-                            <div class="quality-icon">🎯</div>
-                            <h3>Autonomie</h3>
-                            <p>Capacité à gérer mes projets de façon indépendante et proactive</p>
-                        </div>
-                        <div class="quality-card">
-                            <div class="quality-icon">💪</div>
-                            <h3>Persévérance</h3>
-                            <p>Détermination face aux défis techniques et apprentissage continu</p>
-                        </div>
-                        <div class="quality-card">
-                            <div class="quality-icon">📋</div>
-                            <h3>Organisation</h3>
-                            <p>Gestion rigoureuse des tâches et respect des délais</p>
-                        </div>
+                </div>
+                <div class="qualities-grid">
+                    <div class="quality-card">
+                        <span class="quality-num mono-tag">01</span>
+                        <h3>Esprit d'équipe</h3>
+                        <p>Collaboration efficace et communication fluide en équipe pluridisciplinaire</p>
+                    </div>
+                    <div class="quality-card">
+                        <span class="quality-num mono-tag">02</span>
+                        <h3>Autonomie</h3>
+                        <p>Capacité à gérer mes projets de façon indépendante et proactive</p>
+                    </div>
+                    <div class="quality-card">
+                        <span class="quality-num mono-tag">03</span>
+                        <h3>Persévérance</h3>
+                        <p>Détermination face aux défis techniques et apprentissage continu</p>
+                    </div>
+                    <div class="quality-card">
+                        <span class="quality-num mono-tag">04</span>
+                        <h3>Organisation</h3>
+                        <p>Gestion rigoureuse des tâches et respect des délais</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Parcours Section -->
-    <section id="parcours" class="parcours">
+    <!-- Parcours -->
+    <section id="parcours" class="section parcours-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Mon chemin</span>
-                <h2 class="section-title">Parcours Professionnel & Formation</h2>
+            <div class="section-head">
+                <span class="mono-tag">// 02</span>
+                <h2 class="section-title">Parcours</h2>
+                <p class="section-sub">Formation &amp; Expériences</p>
             </div>
-            <div class="parcours-tabs">
+            <div class="tabs">
                 <button class="tab-btn active" data-tab="formation">Formation</button>
                 <button class="tab-btn" data-tab="experience">Expériences</button>
             </div>
-            <div class="parcours-content">
-                <!-- Formation Tab -->
-                <div class="tab-content active" id="formation">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">2026 - 2027 (En cours)</span>
-                                <h3>Master MAALSI</h3>
-                                <p class="timeline-location">CESI - Alternance chez 'Arrive'</p>
-                                <p>Master Management et Architecture Logicielle</p>
-                            </div>
+            <div class="tab-content active" id="formation">
+                <div class="timeline">
+                    <div class="tl-item">
+                        <span class="tl-date mono-tag">2026 — 2027 (En cours)</span>
+                        <div class="tl-card">
+                            <h3>Master MAALSI</h3>
+                            <p class="tl-place">CESI · Alternance chez 'Arrive'</p>
+                            <p class="tl-desc">Master Management et Architecture Logicielle</p>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">2025 - 2026</span>
-                                <h3>Licence CDA</h3>
-                                <p class="timeline-location">CESI / Dijon - Alternance chez 'Arrive'</p>
-                                <p>Concepteur Développeur d'Applications</p>
-                            </div>
+                    </div>
+                    <div class="tl-item">
+                        <span class="tl-date mono-tag">2025 — 2026</span>
+                        <div class="tl-card">
+                            <h3>Licence CDA</h3>
+                            <p class="tl-place">CESI / Dijon · Alternance chez 'Arrive'</p>
+                            <p class="tl-desc">Concepteur Développeur d'Applications</p>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">2023 - 2024</span>
-                                <h3>BTS SIO</h3>
-                                <p class="timeline-location">Lycée Louis PERGAUD / Besançon - Alternance au CROUS BFC
-                                </p>
-                                <p>Services Informatiques aux Organisations</p>
-                            </div>
+                    </div>
+                    <div class="tl-item">
+                        <span class="tl-date mono-tag">2023 — 2024</span>
+                        <div class="tl-card">
+                            <h3>BTS SIO</h3>
+                            <p class="tl-place">Lycée Louis Pergaud / Besançon · CROUS BFC</p>
+                            <p class="tl-desc">Services Informatiques aux Organisations</p>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">2022</span>
-                                <h3>Licence STAPS</h3>
-                                <p class="timeline-location">UFRSTAPS Besançon</p>
-                                <p>Sciences et Techniques des Activités Physiques et Sportives</p>
-                            </div>
+                    </div>
+                    <div class="tl-item">
+                        <span class="tl-date mono-tag">2022</span>
+                        <div class="tl-card">
+                            <h3>Licence STAPS</h3>
+                            <p class="tl-place">UFRSTAPS Besançon</p>
+                            <p class="tl-desc">Sciences et Techniques des Activités Physiques et Sportives</p>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">2021 - 2022</span>
-                                <h3>BAC Général</h3>
-                                <p class="timeline-location">Lycée Victor Considérant / Salins-les-Bains</p>
-                                <p>Baccalauréat général</p>
-                            </div>
+                    </div>
+                    <div class="tl-item">
+                        <span class="tl-date mono-tag">2021 — 2022</span>
+                        <div class="tl-card">
+                            <h3>BAC Général</h3>
+                            <p class="tl-place">Lycée Victor Considérant · Salins-les-Bains</p>
+                            <p class="tl-desc">Baccalauréat général</p>
                         </div>
                     </div>
                 </div>
-                <!-- Experience Tab -->
-                <div class="tab-content" id="experience">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">24 juillet - 24 août 2023</span>
-                                <h3>Cuisinier</h3>
-                                <p class="timeline-location">Taverne de la Finette - Arbois</p>
-                                <p>Préparation culinaire</p>
-                            </div>
+            </div>
+            <div class="tab-content" id="experience">
+                <div class="timeline">
+                    <div class="tl-item">
+                        <span class="tl-date mono-tag">Juil. — Août 2023</span>
+                        <div class="tl-card">
+                            <h3>Cuisinier</h3>
+                            <p class="tl-place">Taverne de la Finette · Arbois</p>
+                            <p class="tl-desc">Préparation culinaire</p>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">3 septembre - 24 juin 2023</span>
-                                <h3>Plongeur</h3>
-                                <p class="timeline-location">Taverne de la Finette - Arbois</p>
-                                <p>Plonge et assistance en cuisine</p>
-                            </div>
+                    </div>
+                    <div class="tl-item">
+                        <span class="tl-date mono-tag">Sept. 2022 — Juin 2023</span>
+                        <div class="tl-card">
+                            <h3>Plongeur</h3>
+                            <p class="tl-place">Taverne de la Finette · Arbois</p>
+                            <p class="tl-desc">Plonge et assistance en cuisine</p>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">29 janvier - 30 mai 2022</span>
-                                <h3>Surveillant / Animateur</h3>
-                                <p class="timeline-location">Centre de Loisirs Aux Ateliers - Miserey-Salines</p>
-                                <p>Encadrement et animation d'enfants</p>
-                            </div>
+                    </div>
+                    <div class="tl-item">
+                        <span class="tl-date mono-tag">Janv. — Mai 2022</span>
+                        <div class="tl-card">
+                            <h3>Surveillant / Animateur</h3>
+                            <p class="tl-place">Centre de Loisirs Aux Ateliers · Miserey-Salines</p>
+                            <p class="tl-desc">Encadrement et animation d'enfants</p>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">Août 2020</span>
-                                <h3>Vendanges</h3>
-                                <p class="timeline-location">Arbois</p>
-                                <p>Travail saisonnier - 2 semaines</p>
-                            </div>
+                    </div>
+                    <div class="tl-item">
+                        <span class="tl-date mono-tag">Août 2020</span>
+                        <div class="tl-card">
+                            <h3>Vendanges</h3>
+                            <p class="tl-place">Arbois</p>
+                            <p class="tl-desc">Travail saisonnier — 2 semaines</p>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">Décembre 2017</span>
-                                <h3>Stage Maçonnerie</h3>
-                                <p class="timeline-location">Maçonnerie L'HOMME - Poligny</p>
-                                <p>Stage de 3ème - Découverte du métier de maçon (1 semaine)</p>
-                            </div>
+                    </div>
+                    <div class="tl-item">
+                        <span class="tl-date mono-tag">Décembre 2017</span>
+                        <div class="tl-card">
+                            <h3>Stage Maçonnerie</h3>
+                            <p class="tl-place">Maçonnerie L'Homme · Poligny</p>
+                            <p class="tl-desc">Stage de 3ème — Découverte du métier de maçon</p>
                         </div>
                     </div>
                 </div>
@@ -250,240 +257,130 @@
         </div>
     </section>
 
-    <!-- Compétences Section -->
-    <section id="competences" class="skills">
+    <!-- Compétences -->
+    <section id="competences" class="section skills-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Ce que je maîtrise</span>
-                <h2 class="section-title">Mes Compétences</h2>
+            <div class="section-head">
+                <span class="mono-tag">// 03</span>
+                <h2 class="section-title">Compétences</h2>
+                <p class="section-sub">Ce que je maîtrise</p>
             </div>
-            <div class="skills-content">
-                <div class="skills-category">
-                    <h3 class="category-title">Langages de Programmation</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <div class="skill-icon">💻</div>
-                            <span class="skill-name">PHP</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" style="--skill-width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">🗄️</div>
-                            <span class="skill-name">SQL</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" style="--skill-width: 70%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">🐍</div>
-                            <span class="skill-name">Python</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" style="--skill-width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">🌐</div>
-                            <span class="skill-name">HTML / CSS</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" style="--skill-width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">📜</div>
-                            <span class="skill-name">JavaScript</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" style="--skill-width: 50%"></div>
-                            </div>
-                        </div>
+            <div class="skills-layout">
+                <div class="skill-level-block">
+                    <div class="skill-level-header">
+                        <span class="skill-level-dot dot-mastered"></span>
+                        <h3 class="skill-level-title">Confirmé</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">HTML / CSS</span>
+                        <span class="skill-tag">Git</span>
                     </div>
                 </div>
-                <div class="skills-category">
-                    <h3 class="category-title">Outils & Technologies</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <div class="skill-icon">🔧</div>
-                            <span class="skill-name">Git</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" style="--skill-width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">🖥️</div>
-                            <span class="skill-name">Développement d'applications</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" style="--skill-width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">🏗️</div>
-                            <span class="skill-name">Architecture Logicielle</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" style="--skill-width: 60%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">📦</div>
-                            <span class="skill-name">Gestion de Projet</span>
-                            <div class="skill-level">
-                                <div class="skill-bar" style="--skill-width: 75%"></div>
-                            </div>
-                        </div>
+                <div class="skill-level-block">
+                    <div class="skill-level-header">
+                        <span class="skill-level-dot dot-learning"></span>
+                        <h3 class="skill-level-title">Intermédiaire</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Développement d'applications</span>
+                        <span class="skill-tag">CI / CD</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Méthodes Agile</span>
+                    </div>
+                </div>
+                <div class="skill-level-block">
+                    <div class="skill-level-header">
+                        <span class="skill-level-dot dot-notions"></span>
+                        <h3 class="skill-level-title">Initiation</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Gestion de Projet</span>
+                        <span class="skill-tag">Architecture Logicielle</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Docker</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projets Section - TEMPORAIREMENT MASQUÉE -->
-    <!--
-    <section id="projets" class="projects">
+    <!-- Centres d'intérêt -->
+    <section id="interets" class="section interests-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Mes réalisations</span>
-                <h2 class="section-title">Projets</h2>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <span class="project-tag">Architecture</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Projets Master MAALSI</h3>
-                        <p class="project-description">
-                            Développement d'applications avec une approche architecturale avancée,
-                            incluant la conception de solutions scalables et maintenables.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">C/C++</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">Architecture</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <span class="project-tag">Développement</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Alternance chez 'Arrive'</h3>
-                        <p class="project-description">
-                            Contribution au développement de solutions logicielles en entreprise,
-                            appliquant les meilleures pratiques de développement agile.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Git</span>
-                            <span class="tech-tag">Dev. Agile</span>
-                            <span class="tech-tag">Collaboration</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <span class="project-tag">Web</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Portfolio Personnel</h3>
-                        <p class="project-description">
-                            Conception et développement de ce portfolio moderne responsive,
-                            avec animations et design contemporain.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML/CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Responsive</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <span class="project-tag">BTS / Licence</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Projets Académiques</h3>
-                        <p class="project-description">
-                            Réalisation de divers projets durant mon BTS SIO et ma Licence CDA,
-                            couvrant le développement d'applications et la gestion de bases de données.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">Applications</span>
-                            <span class="tech-tag">POO</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
-
-    <!-- Centres d'Intérêt Section -->
-    <section id="interets" class="interests-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Mes passions</span>
-                <h2 class="section-title">Centres d'Intérêt</h2>
+            <div class="section-head">
+                <span class="mono-tag">// 04</span>
+                <h2 class="section-title">Passions</h2>
+                <p class="section-sub">Centres d'intérêt</p>
             </div>
             <div class="interests-grid">
                 <div class="interest-card">
-                    <div class="interest-icon-large">🚗</div>
-                    <h3 class="interest-title">Automobile</h3>
-                    <p class="interest-description">
-                        Passionné par l'univers automobile, la mécanique et les performances des véhicules.
-                    </p>
+                    <div class="interest-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/>
+                            <path d="M5 17H3v-6l2-5h11l4 5v6h-2M5 17h14"/>
+                            <path d="M9 11h6"/>
+                        </svg>
+                    </div>
+                    <h3>Automobile</h3>
+                    <p>Passionné par l'univers automobile, la mécanique et les performances des véhicules.</p>
                 </div>
                 <div class="interest-card">
-                    <div class="interest-icon-large">⚽</div>
-                    <h3 class="interest-title">Sport</h3>
-                    <p class="interest-description">
-                        Pratique régulière d'activités sportives pour maintenir un équilibre physique et mental.
-                    </p>
+                    <div class="interest-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                            <path d="M2 12h20"/>
+                        </svg>
+                    </div>
+                    <h3>Sport</h3>
+                    <p>Pratique régulière d'activités sportives pour maintenir un équilibre physique et mental.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <h3>Développement</h3>
+                    <p>Veille technologique, projets personnels et exploration de nouvelles technologies.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Contact -->
+    <section id="contact" class="section contact-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Restons en contact</span>
-                <h2 class="section-title">Contactez-moi</h2>
+            <div class="section-head">
+                <span class="mono-tag">// 05</span>
+                <h2 class="section-title">Contact</h2>
+                <p class="section-sub">Restons en contact</p>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <p class="contact-intro">
-                        Je suis toujours ouvert aux nouvelles opportunités et collaborations.
-                        N'hésitez pas à me contacter !
-                    </p>
-                    <div class="contact-methods">
-                        <a href="mailto:bleaulucas7@gmail.com" class="contact-method">
-                            <div class="method-icon">📧</div>
-                            <div class="method-details">
-                                <span class="method-label">Email</span>
-                                <span class="method-value">bleaulucas7@gmail.com</span>
+            <div class="contact-layout">
+                <div class="contact-left">
+                    <p class="contact-intro">Je suis toujours ouvert aux nouvelles opportunités et collaborations. N'hésitez pas à me contacter !</p>
+                    <div class="contact-list">
+                        <a href="mailto:bleaulucas7@gmail.com" class="contact-item">
+                            <span class="contact-icon mono-tag">@</span>
+                            <div class="contact-detail">
+                                <span class="contact-lbl">Email</span>
+                                <span class="contact-val">bleaulucas7@gmail.com</span>
                             </div>
                         </a>
-                        <a href="tel:0610360128" class="contact-method">
-                            <div class="method-icon">📱</div>
-                            <div class="method-details">
-                                <span class="method-label">Téléphone</span>
-                                <span class="method-value">06 10 36 01 28</span>
+                        <a href="tel:0610360128" class="contact-item">
+                            <span class="contact-icon mono-tag">#</span>
+                            <div class="contact-detail">
+                                <span class="contact-lbl">Téléphone</span>
+                                <span class="contact-val">06 10 36 01 28</span>
                             </div>
                         </a>
-                        <div class="contact-method">
-                            <div class="method-icon">📍</div>
-                            <div class="method-details">
-                                <span class="method-label">Localisation</span>
-                                <span class="method-value">8 Rue Pierre Rubens, 25000 Besançon</span>
+                        <div class="contact-item">
+                            <span class="contact-icon mono-tag">~</span>
+                            <div class="contact-detail">
+                                <span class="contact-lbl">Localisation</span>
+                                <span class="contact-val">Besançon, France</span>
                             </div>
                         </div>
                     </div>
@@ -493,41 +390,43 @@
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_next" value="https://lucas-bleau.vercel.app/merci.html">
-
-                    <div class="form-group">
-                        <label for="name">Nom</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" placeholder="Jean Dupont" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="jean@exemple.fr" required>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="subject">Sujet</label>
-                        <input type="text" id="subject" name="subject" required>
+                        <input type="text" id="subject" name="subject" placeholder="Objet de votre message" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">
-                        <span>Envoyer le message</span>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
+                    <button type="submit" class="btn btn-primary btn-full">
+                        Envoyer le message
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                            <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </button>
                 </form>
             </div>
-        </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Lucas Bleau. Tous droits réservés.</p>
-            <p class="footer-subtitle">Développé avec passion ❤️</p>
+            <div class="footer-inner">
+                <span class="footer-logo mono-tag">LB</span>
+                <p>&copy; 2026 Lucas Bleau</p>
+                <p class="footer-right mono-tag">Développé avec passion</p>
+            </div>
         </div>
     </footer>
 
