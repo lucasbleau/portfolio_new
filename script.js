@@ -1,37 +1,4 @@
 // ============================================
-// CUSTOM CURSOR
-// ============================================
-const cursorDot = document.getElementById('cursorDot');
-const cursorRing = document.getElementById('cursorRing');
-let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
-
-if (window.matchMedia('(pointer: fine)').matches) {
-    document.addEventListener('mousemove', e => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        cursorDot.style.left = mouseX + 'px';
-        cursorDot.style.top = mouseY + 'px';
-    });
-
-    document.addEventListener('mouseover', e => {
-        if (e.target.closest('a, button')) cursorRing.classList.add('expanded');
-    });
-
-    document.addEventListener('mouseout', e => {
-        if (e.target.closest('a, button')) cursorRing.classList.remove('expanded');
-    });
-
-    function animateCursor() {
-        ringX += (mouseX - ringX) * 0.15;
-        ringY += (mouseY - ringY) * 0.15;
-        cursorRing.style.left = ringX + 'px';
-        cursorRing.style.top = ringY + 'px';
-        requestAnimationFrame(animateCursor);
-    }
-    animateCursor();
-}
-
-// ============================================
 // MOBILE NAVIGATION
 // ============================================
 const hamburger = document.getElementById('hamburger');
@@ -123,4 +90,4 @@ revealElements.forEach(el => {
     revealObserver.observe(el);
 });
 
-console.log('%c👋 Bienvenue sur le portfolio de Lucas Bleau', 'color: #22d3ee; font-size: 16px; font-weight: bold;');
+console.log('%c👋 Bienvenue sur le portfolio de Lucas Bleau', 'color: #2f74b5; font-size: 16px; font-weight: bold;');

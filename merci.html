@@ -7,14 +7,14 @@
     <title>Message Envoyé — Lucas Bleau</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Outfit', sans-serif;
-            background: #09090b;
-            color: #fafafa;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(160deg, #e7f1fa 0%, #f4f6f9 60%);
+            color: #1f2a37;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -23,9 +23,10 @@
         }
 
         .card {
-            background: #111113;
-            border: 1px solid #27272a;
-            border-radius: 16px;
+            background: #ffffff;
+            border: 1px solid #e0e5ec;
+            border-radius: 18px;
+            box-shadow: 0 4px 8px rgba(31, 42, 55, 0.05), 0 18px 44px rgba(31, 42, 55, 0.12);
             padding: 3rem 2.5rem;
             max-width: 440px;
             width: 100%;
@@ -42,8 +43,7 @@
             width: 64px;
             height: 64px;
             margin: 0 auto 1.75rem;
-            background: rgba(34, 211, 238, 0.08);
-            border: 1px solid rgba(34, 211, 238, 0.2);
+            background: #e7f1fa;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -57,28 +57,20 @@
         }
 
         .check-wrap svg {
-            stroke: #22d3ee;
-        }
-
-        .mono {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.75rem;
-            color: #22d3ee;
-            letter-spacing: 0.05em;
-            display: block;
-            margin-bottom: 0.5rem;
+            stroke: #2f74b5;
         }
 
         h1 {
-            font-family: 'Bebas Neue', cursive;
-            font-size: 2.5rem;
-            letter-spacing: 0.05em;
-            color: #fafafa;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #1f2a37;
             margin-bottom: 1rem;
         }
 
         p {
-            color: #71717a;
+            color: #47566a;
             font-size: 0.9rem;
             line-height: 1.75;
             margin-bottom: 2rem;
@@ -89,8 +81,8 @@
             align-items: center;
             gap: 0.5rem;
             padding: 0.7rem 1.5rem;
-            background: #22d3ee;
-            color: #09090b;
+            background: #2f74b5;
+            color: #ffffff;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
@@ -99,17 +91,16 @@
         }
 
         .btn:hover {
-            background: #67e8f9;
+            background: #255f96;
             transform: translateY(-2px);
-            box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+            box-shadow: 0 2px 4px rgba(31, 42, 55, 0.04), 0 8px 20px rgba(31, 42, 55, 0.07);
         }
 
         .countdown {
             margin-top: 1.5rem;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.72rem;
-            color: #3f3f46;
-            letter-spacing: 0.03em;
+            margin-bottom: 0;
+            font-size: 0.8rem;
+            color: #5f6e82;
         }
     </style>
 </head>
@@ -121,7 +112,6 @@
                 <path d="M20 6L9 17l-5-5" />
             </svg>
         </div>
-        <span class="mono">// message.sent = true</span>
         <h1>Message Envoyé</h1>
         <p>Merci pour votre message. Je l'ai bien reçu et vous répondrai dans les meilleurs délais.</p>
         <a href="index.html" class="btn">
